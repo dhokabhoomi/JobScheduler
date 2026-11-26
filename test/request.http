@@ -1,0 +1,18 @@
+### GET method
+
+GET http://localhost:4004/odata/v4/employee
+Content-Type: application/json
+
+
+### POSt
+POST http://localhost:4004/odata/v4/employee/RunInactiveEmployeeCheck
+
+###
+GET http://localhost:4004/odata/v4/employee/Employees
+
+### 
+GET http://localhost:4004/odata/v4/employee/AuditLogs
+
+
+### POST
+POST https://vodafone-procurement-company-s-a-r-l--vod-dev-grc-apps-2fc0ff2a.cfapps.eu10.hana.ondemand.com/odata/v4/employee/RunInactiveEmployeeCheck
