@@ -1,0 +1,31 @@
+{
+  "xsappname": "employee-job-scheduler",
+  "tenent-mode": " dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.JobExecutor",
+      "description": "Can execute scheduled jobs"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Administrator access"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "JobExecutor",
+      "description": "Allows execution of scheduler jobs",
+      "scope-references": [
+        "$XSAPPNAME.JobExecutor"
+      ]
+    },
+    {
+      "name": "Administrator",
+      "description": "Administrator role",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ]
+}

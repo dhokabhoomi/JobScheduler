@@ -5,7 +5,7 @@
   "dependencies": {
     "@cap-js/hana": "^3",
     "@sap/cds": "^10",
-    "@sap/xssec": "^4.16.0"
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^3",
@@ -19,6 +19,11 @@
     "requires": {
       "auth": {
         "kind": "mocked"
+      },
+      "[production]": {
+        "auth": {
+          "kind": "xsuaa"
+        }
       }
     }
   }
