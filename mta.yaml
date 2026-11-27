@@ -54,7 +54,7 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: employee-job-scheduler-${org}-${space}
+        xsappname: employee-job-scheduler
         tenant-mode: dedicated
         oauth2-configuration:
           credential-types:

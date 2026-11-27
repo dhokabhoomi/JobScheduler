@@ -1,6 +1,6 @@
 {
   "xsappname": "employee-job-scheduler",
-  "tenant-mode": " dedicated",
+  "tenant-mode": "dedicated",
   "scopes": [
     {
       "name": "$XSAPPNAME.JobExecutor",
