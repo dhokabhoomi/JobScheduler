@@ -26,6 +26,7 @@ modules:
     requires:
       - name: employee-job-scheduler-db
       - name: employee-job-scheduler-job
+      - name: employee-job-scheduler-auth
 
   - name: employee-job-scheduler-db-deployer
     type: hdb
@@ -46,3 +47,16 @@ resources:
     parameters:
       service: jobscheduler
       service-plan: standard
+  - name: employee-job-scheduler-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: employee-job-scheduler-${org}-${space}
+        tenant-mode: dedicated
+        oauth2-configuration:
+          credential-types:
+            - "binding-secret"
+            - "x509"
