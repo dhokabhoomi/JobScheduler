@@ -3,6 +3,8 @@ import cds from '@sap/cds';
 export default cds.service.impl(async function () {
     const { Employees, AuditLogs } = this.entities;
     this.on('RunInactiveEmployeeCheck', async req => {
+        console.log('=== JOB EXECUTED ===', new Date().toISOString());
+
         const employees = await SELECT.from(Employees);
 
         const cutoffDate = new Date();
